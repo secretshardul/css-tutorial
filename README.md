@@ -185,3 +185,48 @@ Stylesheets cascade into a virtual style sheet, where number 1 has highest prior
   3. Color
 
 
+## Backgrounds
+
+### 1. `background-color`
+
+
+### 2. `background-image`
+
+```css
+body {
+  background-image: url("paper.gif");
+}
+```
+
+- The image is repeated by default so that the whole element is covered.
+
+### 3. `background-repeat`
+
+Use `background-repeat` to modify repeat behavior
+- `no-repeat` to disable repeats
+- `repeat-x` or `repeat-y` to only repeat in one axis
+
+### 4. `background-attachment`
+
+- `scroll`: Image scrolls with rest of the page
+- `fixed`: No scrolling
+
+### 5. `background-position`
+
+sets starting position of the image-`right top`, `left bottom` etc
+
+### 6. `background` shorthand
+
+Combines background properties into one property in order
+
+1. `background-color`
+2. `background-image`
+3. `background-repeat`
+4. `background-attachment`
+5. `background-position`
+
+```css
+body {
+  background: #ffffff url("img_tree.png") no-repeat fixed right top;
+}
+```
