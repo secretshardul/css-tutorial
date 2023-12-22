@@ -230,3 +230,59 @@ body {
   background: #ffffff url("img_tree.png") no-repeat fixed right top;
 }
 ```
+
+## Distance Units
+
+Used for length values like `margin`, `padding` etc
+
+### Absolute units
+
+- `cm`, `mm`, `inch`
+- `px`: Equals to one pixel on low resolution screens and multiple pixels on larger screens
+
+### Relative units
+
+Use `em` and `rem` for responsive layouts. There are other less commonly units too.
+
+- `em`: Relative to font size of element. `1em` is twice of the font size.
+- `rem`: Relative to font size of root element
+- `%`: Relative to parent element
+- `ch`: Relative to the width of `0` (zero)
+
+## Margins
+
+Margins create space **around elements**, outside of their borders.
+
+### Margin properties
+
+Define margins with these four properties
+  1. `margin-top`
+  2. `margin-right`
+  3. `margin-bottom`
+  4. `margin-left`
+
+- Or use `margin` as a shorthand.
+  1. If 4 values are provided, eg `margin: 25px 50px 75px 100px;`, they are in the order top, right, bottom left (clockwise order)
+  2. We can also use 3, 2 or one value. The missing values are replicated, i.e.
+    - For 3 values: top, right and left, bottom
+    - For 2 values: top and bottom, right and left
+    - For 1 value: All sides
+
+### Margin values
+
+- `px`, `cm` or `inch`
+- `auto` automatically adds margin to fill up space in the parent. This can be used to horizontally center elements.
+- `inherit` inherits the value from its parent.
+
+### Margin collapse
+
+The actual margin is 50 and not 70 (50+20). CSS uses the greater of two adjacent margins for top and bottom margins. This does not apply to left and right margins.
+
+```html
+<body>
+  <h1 style="margin-bottom:50px">First</h1>
+  <h1 style="margin-top:20px">Second</h2>
+</body>
+```
+
+## Padding
